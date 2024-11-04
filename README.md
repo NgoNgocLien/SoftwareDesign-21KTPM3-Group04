@@ -59,14 +59,14 @@ Ensure you have installed Node.js and npm on your computer. Open the project fol
     ```sh
     git clone https://github.com/pmlinh21/SoftwareDesign-21KTPM3-Group04
     ```
-### 2.2.1 Bacend
+### 2.2.1 Back-end
 - Open the `config.json` file in the `Backend -> src -> config` folder. 
 - In the development section, replace username and password with the postgres account information on your machine. 
 - Open terminal and navigate to the BackEnd folder. 
 - Run `npm install` to download the necessary packages. 
 - Run `npm start` to start the server.
     
-### 2.2.2 Front end
+### 2.2.2 Front-end
 - Open terminal and navigate to the xplore folder. 
 - Run `npm install` to download the necessary packages. 
 - Run `npm start` to start the server.
