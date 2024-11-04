@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   return sequelize.define('post', {
     id_post: {
       autoIncrement: true,
@@ -10,10 +10,6 @@ module.exports = function(sequelize, DataTypes) {
     id_user: {
       type: DataTypes.INTEGER,
       allowNull: true,
-      references: {
-        model: 'user',
-        key: 'id_user'
-      }
     },
     title: {
       type: DataTypes.TEXT,

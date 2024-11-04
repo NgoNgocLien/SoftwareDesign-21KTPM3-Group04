@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { Sequelize, Op } = require('sequelize');
 const process = require('process');
+const initModels = require('./init-models');
 const basename = path.basename(__filename);
 const env = 'development';
 const config = require(__dirname + '/../config/config.json')[env];
@@ -38,5 +39,15 @@ Object.keys(db).forEach(modelName => {
 });
 
 db.sequelize = sequelize;
+
+// initModels(db.sequelize);
+// db.sequelize.sync({ force: true })
+//   .then(() => {
+//     console.log("Database is synchronized");
+//     // Start your server
+//   })
+//   .catch(error => {
+//     console.error("Error synchronizing the database:", error);
+//   });
 
 module.exports = db;

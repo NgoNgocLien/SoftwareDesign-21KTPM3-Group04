@@ -24,10 +24,10 @@ const cookieParser = require("cookie-parser");
 app.use(cookieParser(process.env.JWT_SECRET_KEY))
 
 app.use(session({
-  secret: process.env.JWT_SECRET_KEY, 
+  secret: process.env.JWT_SECRET_KEY,
   resave: false,
   saveUninitialized: false,
-  cookie:{
+  cookie: {
     secure: false,
     httpOnly: true,
     maxAge: 20 * 60 * 1000

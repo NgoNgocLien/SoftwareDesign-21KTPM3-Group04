@@ -2,20 +2,20 @@ const express = require('express');
 const userRoute = express.Router();
 const cookieParser = require("cookie-parser");
 const { login, signup, searchAccountByName, getUserSubscriber,
-    sendEmail, getUserByID, getUserByEmail, updateUserDetail, updateUserProfile, getUserTopic,
-    followATopic, getUserSubscription, makeASubscription,
-    cancelSubscriptionByID, subscribeAnotherUser, unsubscribeAnotherUser,
-    blockAnotherUser, unblockAnotherUser,
-    getUserReceivedNotifications, getUserSentNotifications,
-    getUserReadingHistory, deleteReadingHistory,
-    getUserList, createList, editList, deleteList, getPostByListId,
-    addPostToList, deletePostFromList, getUserHighLight, updatePassword,
-    getUserToken, getAuthorPosts,
-    createOrder,captureOrder,
-    isFollowAuthor, getUserFollow, getUserBlock,
-    pinPost, unpinPost, getUserCurrentSubscription,
-    getUserResponse, getInvisibleUsers } = require("../controllers/userController")
-    
+  sendEmail, getUserByID, getUserByEmail, updateUserDetail, updateUserProfile, getUserTopic,
+  followATopic, getUserSubscription, makeASubscription,
+  cancelSubscriptionByID, subscribeAnotherUser, unsubscribeAnotherUser,
+  blockAnotherUser, unblockAnotherUser,
+  getUserReceivedNotifications, getUserSentNotifications,
+  getUserReadingHistory, deleteReadingHistory,
+  getUserList, createList, editList, deleteList, getPostByListId,
+  addPostToList, deletePostFromList, getUserHighLight, updatePassword,
+  getUserToken, getAuthorPosts,
+  createOrder, captureOrder,
+  isFollowAuthor, getUserFollow, getUserBlock,
+  pinPost, unpinPost, getUserCurrentSubscription,
+  getUserResponse, getInvisibleUsers } = require("../controllers/userController")
+
 userRoute.use(cookieParser(process.env.JWT_SECRET_KEY))
 
 // GET: Login

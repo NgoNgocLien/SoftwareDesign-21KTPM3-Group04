@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   return sequelize.define('user', {
     id_user: {
       autoIncrement: true,
@@ -37,11 +37,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     id_pinned_post: {
       type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'post',
-        key: 'id_post'
-      }
+      allowNull: true
     },
     is_member: {
       type: DataTypes.BOOLEAN,
